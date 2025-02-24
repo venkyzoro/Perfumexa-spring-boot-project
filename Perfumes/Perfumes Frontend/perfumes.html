@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Collection - PERFUMEXA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="perfumes.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #b4bfc3
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #6b46c1;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 50px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            /* Reduced gap for better spacing on smaller screens */
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: #d6bcfa;
+        }
+
+        /* Perfume Card Styles */
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+            justify-content: center;
+            /* Center cards for all screen sizes */
+        }
+
+        .item {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            width: 260px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .item h2 {
+            font-size: 1.2rem;
+            margin: 8px 0;
+        }
+
+        /* Hover effect */
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #f0f8ff;
+        }
+
+        .item:hover h2 {
+            color: #0073e6;
+        }
+
+        .item:hover img {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Media Queries */
+
+        /* Medium Screens (Tablets) */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                /* Allow links to wrap if needed */
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 16px;
+                /* Reduce font size for smaller screens */
+            }
+
+            #container {
+                gap: 20px;
+                /* Reduce spacing between cards */
+            }
+
+            .item {
+                width: 200px;
+                /* Reduce card width for smaller screens */
+            }
+        }
+
+        /* Small Screens (Mobile Phones) */
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                /* Stack navbar items vertically */
+                text-align: center;
+                padding: 10px;
+            }
+
+            .logo {
+                font-size: 24px;
+                /* Adjust logo size */
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            #container {
+                padding: 10px;
+                /* Reduce padding for small screens */
+            }
+
+            .item {
+                width: 100%;
+                /* Make cards take full width */
+                max-width: 300px;
+                /* Limit card width for consistency */
+                margin: 0 auto;
+                /* Center cards */
+            }
+
+            .item h2 {
+                font-size: 1rem;
+                /* Adjust font size for smaller cards */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">PERFUMEXA</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Perfume Collection Section -->
+    <div id="container">
+        <!-- Content will be dynamically loaded from `perfumes.js` -->
+    </div>
+</body>
+
+</html>

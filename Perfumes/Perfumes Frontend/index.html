@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Perfume</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #f8e6e0, #ffffff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #4a2c2a;
+        }
+        .header {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #a0522d;
+        }
+        .header p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .perfume-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 20px 0;
+        }
+        .perfume {
+            text-align: center;
+        }
+        .perfume img {
+            width: 250px;
+            height: auto;
+            perspective: 1000px;
+            transition: transform 0.4s;
+            transform-style: preserve-3d;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .perfume img:hover {
+            transform: rotateY(20deg);
+        }
+        .perfume-name {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            color: #d4a373;
+        }
+        .btn-shop-now {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #d4a373;
+            border: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn-shop-now:hover {
+            background-color: #b5835a;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Elevate Your Senses</h1>
+        <p>Experience the essence of luxury with our premium perfumes</p>
+    </div>
+    <div class="perfume-container">
+        <div class="perfume">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.nmo8j5aNzeNmYfbTWsepOgHaLH&pid=Api" alt="Zaara Perfume">
+            <div class="perfume-name">Zaara</div>
+        </div>
+        <div class="perfume">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.DEOxGW_pnvMNrrDZyq0rfAHaIq&pid=Api" alt="Fogg Perfume">
+            <div class="perfume-name">Fogg</div>
+        </div>
+    </div>
+    <button class="btn-shop-now" onclick="shopNow()">Shop Now</button>
+
+    <script>
+        function shopNow() {
+            alert("Redirecting to the shop...");
+            window.location.href = "#";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - PERFUMEXA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #b4bfc3;
+      color: #4b0082;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6b46c1;
+      color: white;
+      padding: 10px 20px;
+      height: 50px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 78px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 20px;
+    }
+
+    .nav-links a:hover {
+      color: #d6bcfa;
+    }
+
+    /* Contact Us Section */
+    .contact-container {
+      padding: 40px;
+      margin: 20px auto;
+      max-width: 800px;
+      background: linear-gradient(135deg, #f0e68c, #dda0dd);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      margin-top: 80px;
+    }
+
+    .contact-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-container p {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: auto;
+      resize: none;
+    }
+
+    label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 16px;
+      color: #aaa;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      background-color: #f3d864;  
+      padding: 0 5px;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label,
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 10px;
+      font-size: 12px;
+      color: #4b0082;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: #4b0082;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6b46c1;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 40px;
+      }
+
+      .contact-container {
+        padding: 30px;
+        max-width: 600px;
+      }
+
+      .contact-container p {
+        font-size: 16px;
+      }
+
+      input,
+      textarea {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .contact-container {
+        padding: 20px;
+        margin: 20px 10px;
+        max-width: 90%;
+      }
+
+      .contact-container h1 {
+        font-size: 24px;
+      }
+
+      .contact-container p {
+        font-size: 14px;
+      }
+
+      input,
+      textarea {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+    #loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+    display: none; /* Initially hidden */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    z-index: 9999; /* Make sure it's on top of other content */
+}
+
+#loading-overlay img {
+    width: 80px; /* Adjust size of the loading GIF */
+    height: 80px;
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">PERFUMEXA</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="perfumes.html">Perfumes</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Contact Us Section -->
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+    <form class="contact-form"  method="POST" id="sentMail">
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label for="email">Enter your email</label>
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder=" " required>
+        <label for="subject">Contacting for</label>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+        <label for="message">Type your message here...</label>
+      </div>
+      <button type="submit">Submit</button>
+      <div id="loading-overlay">
+        <img src="sending-email-8670394-6925333.webp" alt="Loading...">
+    </div>
+    
+    </form>
+  </div>
+</body>
+<script src="contact.js" defer></script>
+
+</html>

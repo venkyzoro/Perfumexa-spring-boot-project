@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PERFUMEXA Navbar and Banner</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #737373;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6b46c1;
+      color: white;
+      padding: 10px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 50px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 78px;
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 20px;
+    }
+
+    .nav-links a:hover {
+      color: #d6bcfa;
+    }
+
+    #butDiv {
+      display: flex;
+      /* align-items: center;
+         */
+      /* justify-content: flex-end; */
+      justify-content: center;
+
+    }
+
+    button {
+      background-color: #4b0082;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      /* border-red: 10px; */
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #f0e68c, #dda0dd);
+      padding: 40px;
+      height: 80vh;
+      box-sizing: border-box;
+      border-radius: 10px;
+      margin: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .banner-content {
+      max-width: 65%;
+      animation: fadeIn 1.5s ease-in-out;
+      margin-left: 72px;
+    }
+
+    .banner-content h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #4b0082;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .banner-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #4b0082;
+    }
+
+    .banner-content .rating {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #483d8b;
+    }
+
+    .banner-content .price {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ff4500;
+    }
+
+    .banner-content .reviews {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #006400;
+    }
+
+    .banner-image img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 352px;
+      width: 300px;
+      margin: 166px;
+    }
+
+    .banner-image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">PERFUMEXA</div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="perfumes.html">Perfumes</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Trending Perfume: Elegance Essence</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus deleniti expedita vel quod, doloribus fugiat
+        molestias aspernatur! Fugit nesciunt totam expedita et in velit consequuntur quae sapiente eaque, nihil
+        voluptates reiciendis accusamus ducimus facilis optio fuga corporis, iste animi. Libero iste qui, cumque, velit
+        repellendus quas maiores nisi ullam, voluptas itaque at aliquid delectus doloremque praesentium tenetur ex
+        consequuntur corrupti repellat? Molestiae eos fugiat vel dicta optio fugit incidunt corrupti, quae aperiam natus
+        nam accusantium quis quisquam sint accusamus. Deleniti aspernatur dignissimos, accusantium, sint ex aliquid
+        exercitationem aut placeat suscipit consequatur vitae facilis atque animi harum. Vel eveniet corporis deleniti?
+      </p>
+      <div class="rating">Rating: ★★★★☆ (4.5/5)</div>
+      <div class="reviews">Reviews: "Absolutely love it!", "Best fragrance ever!", "A must-have in your collection."
+      </div>
+      <div class="price">Price: $79.99</div>
+    </div>
+    <div class="banner-image">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.vOw8Oa5afliGVDPolC0QZQHaLG&pid=Api&P=0&h=180" alt="Trending Perfume">
+    </div>
+
+  </section>
+  <div id="butDiv">
+    <a href="perfumes.html"><button>View More Perfumes</button></a>
+  </div>
+</body>
+
+</html>
